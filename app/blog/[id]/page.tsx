@@ -13,7 +13,7 @@ type Props = {
 }
 
 export default async function Post({params: {id}}: Props) {
-    const post = await getData(id);
+    const post: any = await getData(id);
     return (
         <>
             <h1>{post.title}</h1>
