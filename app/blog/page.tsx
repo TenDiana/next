@@ -3,11 +3,7 @@ import fetch from "node-fetch";
 import Link from "next/link";
 // import {fetch} from "next/dist/compiled/@edge-runtime/primitives";
 async function getData() {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-        next: {
-            revalidate: 60
-        }
-    });
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
 
     if(!response.ok) throw new Error('Unable to t=fetch posts')
 
